@@ -1,0 +1,17 @@
+{
+  "name": "user_study_planner",
+  "version": "1.0.0",
+  "description": "Create a balanced keyboard order and randomized phrase set for pilot and main user study",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "keywords": [
+    "latin-square"
+  ],
+  "author": "Reinhard Pointner",
+  "license": "ISC",
+  "dependencies": {
+    "latin-square": "^2.0.4"
+  }
+}

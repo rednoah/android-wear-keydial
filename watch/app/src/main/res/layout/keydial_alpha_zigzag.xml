@@ -1,0 +1,682 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.wearable.view.BoxInsetLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/watch_bg">
+
+
+    <android.support.wearable.view.WearableRecyclerView
+        android:id="@+id/suggestion_recycler"
+        android:layout_width="130dp"
+        android:layout_height="145dp"
+        android:layout_gravity="center" />
+
+
+    <ntu.csie.keydial.CircleLayout
+        android:id="@+id/letters"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:margin="@dimen/keydial_margin"
+        app:zigzag="@dimen/keydial_zigzag">
+
+        <Button
+            android:layout_width="@dimen/keydial_button_size"
+            android:layout_height="@dimen/keydial_button_size"
+            android:background="@drawable/keydial_button_bg"
+            android:gravity="center"
+            android:padding="@dimen/keydial_button_padding"
+            android:text="Z"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/key_fg" />
+
+        <Button
+            android:layout_width="@dimen/keydial_button_size"
+            android:layout_height="@dimen/keydial_button_size"
+            android:background="@drawable/keydial_button_bg"
+            android:gravity="center"
+            android:padding="@dimen/keydial_button_padding"
+            android:text="A"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/key_fg" />
+
+        <Button
+            android:layout_width="@dimen/keydial_button_size"
+            android:layout_height="@dimen/keydial_button_size"
+            android:background="@drawable/keydial_button_bg"
+            android:gravity="center"
+            android:padding="@dimen/keydial_button_padding"
+            android:text="B"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/key_fg" />
+
+        <Button
+            android:layout_width="@dimen/keydial_button_size"
+            android:layout_height="@dimen/keydial_button_size"
+            android:background="@drawable/keydial_button_bg"
+            android:gravity="center"
+            android:padding="@dimen/keydial_button_padding"
+            android:text="C"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/key_fg" />
+
+        <Button
+            android:layout_width="@dimen/keydial_button_size"
+            android:layout_height="@dimen/keydial_button_size"
+            android:background="@drawable/keydial_button_bg"
+            android:gravity="center"
+            android:padding="@dimen/keydial_button_padding"
+            android:text="D"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/key_fg" />
+
+        <Button
+            android:layout_width="@dimen/keydial_button_size"
+            android:layout_height="@dimen/keydial_button_size"
+            android:background="@drawable/keydial_button_bg"
+            android:gravity="center"
+            android:padding="@dimen/keydial_button_padding"
+            android:text="E"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/key_fg" />
+
+        <Button
+            android:layout_width="@dimen/keydial_button_size"
+            android:layout_height="@dimen/keydial_button_size"
+            android:background="@drawable/keydial_button_bg"
+            android:gravity="center"
+            android:padding="@dimen/keydial_button_padding"
+            android:text="F"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/key_fg" />
+
+        <Button
+            android:layout_width="@dimen/keydial_button_size"
+            android:layout_height="@dimen/keydial_button_size"
+            android:background="@drawable/keydial_button_bg"
+            android:gravity="center"
+            android:padding="@dimen/keydial_button_padding"
+            android:text="G"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/key_fg" />
+
+        <Button
+            android:layout_width="@dimen/keydial_button_size"
+            android:layout_height="@dimen/keydial_button_size"
+            android:background="@drawable/keydial_button_bg"
+            android:gravity="center"
+            android:padding="@dimen/keydial_button_padding"
+            android:text="H"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/key_fg" />
+
+        <Button
+            android:layout_width="@dimen/keydial_button_size"
+            android:layout_height="@dimen/keydial_button_size"
+            android:background="@drawable/keydial_button_bg"
+            android:gravity="center"
+            android:padding="@dimen/keydial_button_padding"
+            android:text="I"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/key_fg" />
+
+        <Button
+            android:layout_width="@dimen/keydial_button_size"
+            android:layout_height="@dimen/keydial_button_size"
+            android:background="@drawable/keydial_button_bg"
+            android:gravity="center"
+            android:padding="@dimen/keydial_button_padding"
+            android:text="J"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/key_fg" />
+
+        <Button
+            android:layout_width="@dimen/keydial_button_size"
+            android:layout_height="@dimen/keydial_button_size"
+            android:background="@drawable/keydial_button_bg"
+            android:gravity="center"
+            android:padding="@dimen/keydial_button_padding"
+            android:text="K"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/key_fg" />
+
+        <Button
+            android:layout_width="@dimen/keydial_button_size"
+            android:layout_height="@dimen/keydial_button_size"
+            android:background="@drawable/keydial_button_bg"
+            android:gravity="center"
+            android:padding="@dimen/keydial_button_padding"
+            android:text="L"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/key_fg" />
+
+        <Button
+            android:layout_width="@dimen/keydial_button_size"
+            android:layout_height="@dimen/keydial_button_size"
+            android:background="@drawable/keydial_button_bg"
+            android:gravity="center"
+            android:padding="@dimen/keydial_button_padding"
+            android:text="M"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/key_fg" />
+
+        <Button
+            android:layout_width="@dimen/keydial_button_size"
+            android:layout_height="@dimen/keydial_button_size"
+            android:background="@drawable/keydial_button_bg"
+            android:gravity="center"
+            android:padding="@dimen/keydial_button_padding"
+            android:text="N"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/key_fg" />
+
+        <Button
+            android:layout_width="@dimen/keydial_button_size"
+            android:layout_height="@dimen/keydial_button_size"
+            android:background="@drawable/keydial_button_bg"
+            android:gravity="center"
+            android:padding="@dimen/keydial_button_padding"
+            android:text="O"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/key_fg" />
+
+        <Button
+            android:layout_width="@dimen/keydial_button_size"
+            android:layout_height="@dimen/keydial_button_size"
+            android:background="@drawable/keydial_button_bg"
+            android:gravity="center"
+            android:padding="@dimen/keydial_button_padding"
+            android:text="P"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/key_fg" />
+
+        <Button
+            android:layout_width="@dimen/keydial_button_size"
+            android:layout_height="@dimen/keydial_button_size"
+            android:background="@drawable/keydial_button_bg"
+            android:gravity="center"
+            android:padding="@dimen/keydial_button_padding"
+            android:text="Q"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/key_fg" />
+
+        <Button
+            android:layout_width="@dimen/keydial_button_size"
+            android:layout_height="@dimen/keydial_button_size"
+            android:background="@drawable/keydial_button_bg"
+            android:gravity="center"
+            android:padding="@dimen/keydial_button_padding"
+            android:text="R"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/key_fg" />
+
+        <Button
+            android:layout_width="@dimen/keydial_button_size"
+            android:layout_height="@dimen/keydial_button_size"
+            android:background="@drawable/keydial_button_bg"
+            android:gravity="center"
+            android:padding="@dimen/keydial_button_padding"
+            android:text="S"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/key_fg" />
+
+        <Button
+            android:layout_width="@dimen/keydial_button_size"
+            android:layout_height="@dimen/keydial_button_size"
+            android:background="@drawable/keydial_button_bg"
+            android:gravity="center"
+            android:padding="@dimen/keydial_button_padding"
+            android:text="T"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/key_fg" />
+
+        <Button
+            android:layout_width="@dimen/keydial_button_size"
+            android:layout_height="@dimen/keydial_button_size"
+            android:background="@drawable/keydial_button_bg"
+            android:gravity="center"
+            android:padding="@dimen/keydial_button_padding"
+            android:text="U"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/key_fg" />
+
+        <Button
+            android:layout_width="@dimen/keydial_button_size"
+            android:layout_height="@dimen/keydial_button_size"
+            android:background="@drawable/keydial_button_bg"
+            android:gravity="center"
+            android:padding="@dimen/keydial_button_padding"
+            android:text="V"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/key_fg" />
+
+        <Button
+            android:layout_width="@dimen/keydial_button_size"
+            android:layout_height="@dimen/keydial_button_size"
+            android:background="@drawable/keydial_button_bg"
+            android:gravity="center"
+            android:padding="@dimen/keydial_button_padding"
+            android:text="W"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/key_fg" />
+
+        <Button
+            android:layout_width="@dimen/keydial_button_size"
+            android:layout_height="@dimen/keydial_button_size"
+            android:background="@drawable/keydial_button_bg"
+            android:gravity="center"
+            android:padding="@dimen/keydial_button_padding"
+            android:text="X"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/key_fg" />
+
+        <Button
+            android:layout_width="@dimen/keydial_button_size"
+            android:layout_height="@dimen/keydial_button_size"
+            android:background="@drawable/keydial_button_bg"
+            android:gravity="center"
+            android:padding="@dimen/keydial_button_padding"
+            android:text="Y"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/key_fg" />
+
+    </ntu.csie.keydial.CircleLayout>
+
+
+    <ntu.csie.keydial.CircleLayout
+        android:id="@+id/numbers"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        app:margin="@dimen/keydial_margin"
+        app:zigzag="@dimen/keydial_zigzag">
+
+        <Button
+            android:layout_width="@dimen/keydial_button_size"
+            android:layout_height="@dimen/keydial_button_size"
+            android:background="@drawable/keydial_button_bg"
+            android:gravity="center"
+            android:padding="@dimen/keydial_button_padding"
+            android:text="0"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/key_fg" />
+
+        <Button
+            android:layout_width="@dimen/keydial_button_size"
+            android:layout_height="@dimen/keydial_button_size"
+            android:background="@drawable/keydial_button_bg"
+            android:gravity="center"
+            android:padding="@dimen/keydial_button_padding"
+            android:text="1"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/key_fg" />
+
+        <Button
+            android:layout_width="@dimen/keydial_button_size"
+            android:layout_height="@dimen/keydial_button_size"
+            android:background="@drawable/keydial_button_bg"
+            android:gravity="center"
+            android:padding="@dimen/keydial_button_padding"
+            android:text="2"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/key_fg" />
+
+        <Button
+            android:layout_width="@dimen/keydial_button_size"
+            android:layout_height="@dimen/keydial_button_size"
+            android:background="@drawable/keydial_button_bg"
+            android:gravity="center"
+            android:padding="@dimen/keydial_button_padding"
+            android:text="3"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/key_fg" />
+
+        <Button
+            android:layout_width="@dimen/keydial_button_size"
+            android:layout_height="@dimen/keydial_button_size"
+            android:background="@drawable/keydial_button_bg"
+            android:gravity="center"
+            android:padding="@dimen/keydial_button_padding"
+            android:text="4"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/key_fg" />
+
+        <Button
+            android:layout_width="@dimen/keydial_button_size"
+            android:layout_height="@dimen/keydial_button_size"
+            android:background="@drawable/keydial_button_bg"
+            android:gravity="center"
+            android:padding="@dimen/keydial_button_padding"
+            android:text="5"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/key_fg" />
+
+        <Button
+            android:layout_width="@dimen/keydial_button_size"
+            android:layout_height="@dimen/keydial_button_size"
+            android:background="@drawable/keydial_button_bg"
+            android:gravity="center"
+            android:padding="@dimen/keydial_button_padding"
+            android:text="6"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/key_fg" />
+
+        <Button
+            android:layout_width="@dimen/keydial_button_size"
+            android:layout_height="@dimen/keydial_button_size"
+            android:background="@drawable/keydial_button_bg"
+            android:gravity="center"
+            android:padding="@dimen/keydial_button_padding"
+            android:text="7"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/key_fg" />
+
+        <Button
+            android:layout_width="@dimen/keydial_button_size"
+            android:layout_height="@dimen/keydial_button_size"
+            android:background="@drawable/keydial_button_bg"
+            android:gravity="center"
+            android:padding="@dimen/keydial_button_padding"
+            android:text="8"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/key_fg" />
+
+        <Button
+            android:layout_width="@dimen/keydial_button_size"
+            android:layout_height="@dimen/keydial_button_size"
+            android:background="@drawable/keydial_button_bg"
+            android:gravity="center"
+            android:padding="@dimen/keydial_button_padding"
+            android:text="9"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/key_fg" />
+
+        <Button
+            android:layout_width="@dimen/keydial_button_size"
+            android:layout_height="@dimen/keydial_button_size"
+            android:background="@drawable/keydial_button_bg"
+            android:gravity="center"
+            android:padding="@dimen/keydial_button_padding"
+            android:text="#"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/key_fg" />
+
+        <Button
+            android:layout_width="@dimen/keydial_button_size"
+            android:layout_height="@dimen/keydial_button_size"
+            android:background="@drawable/keydial_button_bg"
+            android:gravity="center"
+            android:padding="@dimen/keydial_button_padding"
+            android:text="\@"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/key_fg" />
+
+        <Button
+            android:layout_width="@dimen/keydial_button_size"
+            android:layout_height="@dimen/keydial_button_size"
+            android:background="@drawable/keydial_button_bg"
+            android:gravity="center"
+            android:padding="@dimen/keydial_button_padding"
+            android:text="$"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/key_fg" />
+
+        <Button
+            android:layout_width="@dimen/keydial_button_size"
+            android:layout_height="@dimen/keydial_button_size"
+            android:background="@drawable/keydial_button_bg"
+            android:gravity="center"
+            android:padding="@dimen/keydial_button_padding"
+            android:text="&amp;"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/key_fg" />
+
+        <Button
+            android:layout_width="@dimen/keydial_button_size"
+            android:layout_height="@dimen/keydial_button_size"
+            android:background="@drawable/keydial_button_bg"
+            android:gravity="center"
+            android:padding="@dimen/keydial_button_padding"
+            android:text="%"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/key_fg" />
+
+
+        <Button
+            android:layout_width="@dimen/keydial_button_size"
+            android:layout_height="@dimen/keydial_button_size"
+            android:background="@drawable/keydial_button_bg"
+            android:gravity="center"
+            android:padding="@dimen/keydial_button_padding"
+            android:text="-"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/key_fg" />
+
+        <Button
+            android:layout_width="@dimen/keydial_button_size"
+            android:layout_height="@dimen/keydial_button_size"
+            android:background="@drawable/keydial_button_bg"
+            android:gravity="center"
+            android:padding="@dimen/keydial_button_padding"
+            android:text="+"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/key_fg" />
+
+        <Button
+            android:layout_width="@dimen/keydial_button_size"
+            android:layout_height="@dimen/keydial_button_size"
+            android:background="@drawable/keydial_button_bg"
+            android:gravity="center"
+            android:padding="@dimen/keydial_button_padding"
+            android:text=")"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/key_fg" />
+
+        <Button
+            android:layout_width="@dimen/keydial_button_size"
+            android:layout_height="@dimen/keydial_button_size"
+            android:background="@drawable/keydial_button_bg"
+            android:gravity="center"
+            android:padding="@dimen/keydial_button_padding"
+            android:text="("
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/key_fg" />
+
+        <Button
+            android:layout_width="@dimen/keydial_button_size"
+            android:layout_height="@dimen/keydial_button_size"
+            android:background="@drawable/keydial_button_bg"
+            android:gravity="center"
+            android:padding="@dimen/keydial_button_padding"
+            android:text="."
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/key_fg" />
+
+        <Button
+            android:layout_width="@dimen/keydial_button_size"
+            android:layout_height="@dimen/keydial_button_size"
+            android:background="@drawable/keydial_button_bg"
+            android:gravity="center"
+            android:padding="@dimen/keydial_button_padding"
+            android:text="*"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/key_fg" />
+
+        <Button
+            android:layout_width="@dimen/keydial_button_size"
+            android:layout_height="@dimen/keydial_button_size"
+            android:background="@drawable/keydial_button_bg"
+            android:gravity="center"
+            android:padding="@dimen/keydial_button_padding"
+            android:text=","
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/key_fg" />
+
+        <Button
+            android:layout_width="@dimen/keydial_button_size"
+            android:layout_height="@dimen/keydial_button_size"
+            android:background="@drawable/keydial_button_bg"
+            android:gravity="center"
+            android:padding="@dimen/keydial_button_padding"
+            android:text=";"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/key_fg" />
+
+        <Button
+            android:layout_width="@dimen/keydial_button_size"
+            android:layout_height="@dimen/keydial_button_size"
+            android:background="@drawable/keydial_button_bg"
+            android:gravity="center"
+            android:padding="@dimen/keydial_button_padding"
+            android:text="!"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/key_fg" />
+
+        <Button
+            android:layout_width="@dimen/keydial_button_size"
+            android:layout_height="@dimen/keydial_button_size"
+            android:background="@drawable/keydial_button_bg"
+            android:gravity="center"
+            android:padding="@dimen/keydial_button_padding"
+            android:text="'"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/key_fg" />
+
+        <Button
+            android:layout_width="@dimen/keydial_button_size"
+            android:layout_height="@dimen/keydial_button_size"
+            android:background="@drawable/keydial_button_bg"
+            android:gravity="center"
+            android:padding="@dimen/keydial_button_padding"
+            android:text="\?"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/key_fg" />
+
+    </ntu.csie.keydial.CircleLayout>
+
+
+    <TextView
+        android:id="@+id/text_editor"
+        android:layout_width="112dp"
+        android:layout_height="25dp"
+        android:layout_gravity="bottom|center"
+        android:layout_marginBottom="60dp"
+        android:layout_marginRight="3dp"
+        android:background="@drawable/editor_bg"
+        android:ellipsize="start"
+        android:gravity="left|center"
+        android:maxLines="1"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="@string/app_name"
+        android:textColor="@color/editor_fg" />
+
+
+    <ntu.csie.keydial.CircleLayout
+        android:id="@+id/controls"
+        android:layout_width="75dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="12dp"
+        android:layout_marginLeft="32dp"
+        app:angleOffset="110"
+        app:angleRange="360"
+        app:margin="32dp"
+        app:zigzag="0dp">
+
+
+        <Button
+            android:id="@+id/shift"
+            android:layout_width="@dimen/keydial_button_size"
+            android:layout_height="@dimen/keydial_button_size"
+            android:background="@drawable/keydial_button_alt_bg"
+            android:gravity="center"
+            android:text="⌥"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/key_fg" />
+
+        <Button
+            android:id="@+id/mode"
+            android:layout_width="@dimen/keydial_modifier_button_size"
+            android:layout_height="@dimen/keydial_modifier_button_size"
+            android:background="@drawable/keydial_button_alt_bg"
+            android:gravity="center"
+            android:padding="@dimen/keydial_button_padding"
+            android:text="⌨"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/key_fg" />
+
+
+        <Button
+            android:id="@+id/submit"
+            android:layout_width="@dimen/keydial_submit_button_size"
+            android:layout_height="@dimen/keydial_submit_button_size"
+            android:background="@drawable/keydial_button_alt_bg"
+            android:gravity="center"
+            android:padding="@dimen/keydial_button_padding"
+            android:text="⏎"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/key_fg"
+            android:textSize="@dimen/keydial_submit_button_text_size"
+            android:textStyle="bold" />
+
+
+    </ntu.csie.keydial.CircleLayout>
+
+
+</android.support.wearable.view.BoxInsetLayout>

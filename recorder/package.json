@@ -1,0 +1,19 @@
+{
+  "name": "keydial-recorder",
+  "version": "1.0.0",
+  "description": "",
+  "main": "record.js",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "compression": "^1.6.2",
+    "express": "^4.15.2",
+    "express-ws": "^3.0.0",
+    "serve-index": "^1.8.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "mkdir -p public && node index.js 2>&1 | tee public/log.txt"
+  },
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "478089061200",
+    "firebase_url": "https://keydial-ad42e.firebaseio.com",
+    "project_id": "keydial-ad42e",
+    "storage_bucket": "keydial-ad42e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:478089061200:android:c30b298cbdb856ff",
+        "android_client_info": {
+          "package_name": "com.example.reinhard.keydial"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "478089061200-62ivqfmdiir67bsutoq73j4q2uvlu40q.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.reinhard.keydial",
+            "certificate_hash": "f8b3e96324ff7e43e03ed405a6e2aa3f79e4d263"
+          }
+        },
+        {
+          "client_id": "478089061200-r168noa07b46l9k0lqpv511aqgo7rkpf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAKxNH6dWCnApXNpx1X4hWRcynU1dP7_A4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "478089061200-r168noa07b46l9k0lqpv511aqgo7rkpf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

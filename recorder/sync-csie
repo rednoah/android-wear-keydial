@@ -1,0 +1,1 @@
+rsync -v --progress --human-readable -e 'ssh -i id_rsa ' *.js *.json r02922148@oasis1.csie.ntu.edu.tw:~/recorder

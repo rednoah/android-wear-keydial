@@ -1,0 +1,5 @@
+/node_modules/
+/public/
+*.pem
+*.pub
+id_rsa

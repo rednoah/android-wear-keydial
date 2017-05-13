@@ -1,0 +1,1 @@
+ssh -i id_rsa -t r02922148@oasis1.csie.ntu.edu.tw /bin/bash
