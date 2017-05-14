@@ -19,3 +19,4 @@ for i in "${!banner_layouts[@]}"; do
 done
 
 convert $OUTPUT/banner_* -background none -append "$OUTPUT/stripe_banner_layouts.png"
+convert mode_* -background none -append "$OUTPUT/stripe_mode_layouts.png"
