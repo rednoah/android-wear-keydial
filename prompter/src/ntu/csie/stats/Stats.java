@@ -6,6 +6,7 @@ import static java.util.stream.Collectors.*;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.time.Duration;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -19,7 +20,7 @@ public class Stats {
 
 	enum Study {
 
-		MAIN;
+		MAIN, OOV;
 
 		public List<String> getPhraseSet() throws IOException {
 			return Files.readAllLines(Paths.get(name().toLowerCase() + "-study-phrase-set.txt"), UTF_8);
@@ -117,6 +118,16 @@ public class Stats {
 		}
 	}
 
+	public void statsForEachUser(List<Sample> samples) {
+		List<List<Sample>> samplesByUser = StreamEx.of(samples).filter(Sample::isValidSample).groupRuns((s1, s2) -> s1.getSession().equals(s2.getSession())).toList();
+
+		int i = 1;
+		for (List<Sample> userSamples : samplesByUser) {
+			System.out.format("### User %d (%s)%n", i++, userSamples.get(0).getSession());
+			statsForEachKeyboard(userSamples);
+		}
+	}
+
 	public DoubleStatistics stats(List<Sample> samples, Function<Sample, Double> metric) {
 		return samples.stream().mapToDouble(s -> metric.apply(s)).collect(DoubleStatistics::new, DoubleStatistics::accept, DoubleStatistics::combine);
 	}
@@ -125,6 +136,13 @@ public class Stats {
 		StreamEx.of(samples).groupRuns((s1, s2) -> s1.getSession().equals(s2.getSession())).forEach(userSamples -> {
 			statsForEachSample(userSamples);
 		});
+	}
+
+	public void statsTotal(List<Sample> samples) {
+		List<Sample> total = StreamEx.of(samples).filter(Sample::isValidSample).toList();
+
+		System.out.format("Total Count: %d samples%n", total.size());
+		System.out.format("Total Time: %.01f hours%n", total.stream().map(Sample::getDuration).reduce(Duration.ZERO, Duration::plus).toMinutes() / 60d);
 	}
 
 	public KeyboardLayout[] getKeyboards(List<Sample> samples) {
@@ -139,13 +157,25 @@ public class Stats {
 			System.out.println();
 
 			List<Sample> samples = s.getSamples();
+
+			// System.out.println("## Stats for each Sentence");
 			// stats.print(samples);
+			// System.out.println();
+
+			System.out.println("## Stats for each User");
+			stats.statsForEachUser(samples);
+			System.out.println();
+
 			System.out.println("## Stats for each Keyboard");
 			stats.statsForEachKeyboard(samples);
 			System.out.println();
 
 			System.out.println("## Stats for each Block");
-			stats.statsForEachBlock(samples, 4, 5);
+			stats.statsForEachBlock(samples, s.getPhraseLimit() / 5, 5);
+			System.out.println();
+
+			System.out.println("## Total");
+			stats.statsTotal(samples);
 			System.out.println();
 		}
 
