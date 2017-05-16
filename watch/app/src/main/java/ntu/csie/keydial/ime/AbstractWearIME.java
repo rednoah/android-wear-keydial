@@ -3,6 +3,8 @@ package ntu.csie.keydial.ime;
 import android.content.Context;
 import android.inputmethodservice.InputMethodService;
 import android.util.Log;
+import android.view.KeyEvent;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
 import android.view.inputmethod.ExtractedTextRequest;
@@ -41,6 +43,21 @@ public abstract class AbstractWearIME extends InputMethodService {
 
 
     @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        Log.d(TAG, "onKeyDown: " + KeyEvent.keyCodeToString(keyCode));
+
+        // forward watch hardware button events to soft keyboard
+        return keyboard.onKeyDown(keyCode, event);
+    }
+
+
+    @Override
+    public boolean onGenericMotionEvent(MotionEvent event) {
+        Log.d(TAG, "onGenericMotionEvent: " + event);
+        return false;
+    }
+
+    @Override
     public View onCreateExtractTextView() {
         return null;
     }
@@ -71,10 +88,25 @@ public abstract class AbstractWearIME extends InputMethodService {
 
         InputConnection ic = getCurrentInputConnection();
         String s = ic.getExtractedText(new ExtractedTextRequest(), 0).text.toString();
+
+        // reset cursor
         ic.deleteSurroundingText(Integer.MAX_VALUE, Integer.MAX_VALUE);
+
+        // try to focus suggestion recycler
+        keyboard.getSuggestionView().requestFocus();
+
 
         Log.d(TAG, "BUFFER: " + s);
         keyboard.setText(s, Mode.LETTERS, LetterCase.UPPER);
+    }
+
+
+    @Override
+    public void onWindowShown() {
+        // TODO: keyboard does not generic motion events (Android Wear Bug)
+
+        // try to focus suggestion recycler
+        keyboard.getSuggestionView().requestFocus();
     }
 
 
@@ -83,6 +115,7 @@ public abstract class AbstractWearIME extends InputMethodService {
 
         // clear input
         InputConnection ic = getCurrentInputConnection();
+        ic.deleteSurroundingText(Integer.MAX_VALUE, Integer.MAX_VALUE);
         ic.commitText(s, s.length());
 
         sendDefaultEditorAction(true);

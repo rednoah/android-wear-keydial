@@ -109,7 +109,9 @@ public abstract class AbstractKeyboardLayout extends BoxInsetLayout {
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         if (event.getRepeatCount() == 0) {
             // log hardware key events
-            recorder.record(KeyEvent.keyCodeToString(keyCode), buffer);
+            if (recorder != null) {
+                recorder.record(KeyEvent.keyCodeToString(keyCode), buffer);
+            }
 
             if (keyCode == KeyEvent.KEYCODE_STEM_1) {
                 keyPressed(Symbols.KEYBOARD, InputType.CONTROL_KEY);

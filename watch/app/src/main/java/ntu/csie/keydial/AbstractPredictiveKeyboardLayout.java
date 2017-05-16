@@ -60,6 +60,11 @@ public abstract class AbstractPredictiveKeyboardLayout extends AbstractKeyboardL
     }
 
 
+    public WearableRecyclerView getSuggestionView() {
+        return suggestionView;
+    }
+
+
     public void setSuggestions(List<String> suggestions) {
         // update suggestions
         suggestionView.setAdapter(new SuggestionViewAdapter(getSuggestionItemLayout(), suggestions, this::enterSuggestion, getLastWord(), suggestionLeadHighlightColor));
