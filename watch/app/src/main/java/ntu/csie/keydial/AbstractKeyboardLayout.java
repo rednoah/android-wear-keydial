@@ -215,8 +215,13 @@ public abstract class AbstractKeyboardLayout extends BoxInsetLayout {
         }
 
 
-        hapticFeedback.feedback();
-        recorder.record(key, buffer);
+        if (hapticFeedback != null) {
+            hapticFeedback.feedback();
+        }
+
+        if (recorder != null) {
+            recorder.record(key, buffer);
+        }
     }
 
 
@@ -296,7 +301,7 @@ public abstract class AbstractKeyboardLayout extends BoxInsetLayout {
     }
 
 
-    enum LetterCase {
+    public enum LetterCase {
         UPPER, LOWER;
 
         public LetterCase shift() {
@@ -305,7 +310,7 @@ public abstract class AbstractKeyboardLayout extends BoxInsetLayout {
     }
 
 
-    enum Mode {
+    public enum Mode {
         LETTERS, NUMBERS_AND_PUNCTUATION;
 
         public Mode shift() {
@@ -328,7 +333,7 @@ public abstract class AbstractKeyboardLayout extends BoxInsetLayout {
         for (Mode m : Mode.values()) {
             layout.findViewById(getModeLayout(m)).setVisibility(m == mode ? VISIBLE : GONE);
         }
-        
+
         // update button text
         setLetterCase(LetterCase.UPPER);
     }
@@ -345,10 +350,16 @@ public abstract class AbstractKeyboardLayout extends BoxInsetLayout {
         clear();
     }
 
+
     public void clear() {
-        updateTextBuffer("");
-        setMode(Mode.LETTERS);
-        setLetterCase(LetterCase.UPPER);
+        setText("", Mode.LETTERS, LetterCase.UPPER);
+    }
+
+
+    public void setText(String s, Mode m, LetterCase c) {
+        updateTextBuffer(s);
+        setMode(m);
+        setLetterCase(c);
     }
 
 

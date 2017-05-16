@@ -8,7 +8,7 @@ public enum KeyboardLayout {
 
     KeyDialAlpha {
         @Override
-        KeyDial createView(Context context) {
+        public KeyDial createView(Context context) {
             return new KeyDial(context, KeyDial.ALPHA);
         }
     },
@@ -16,7 +16,7 @@ public enum KeyboardLayout {
 
     KeyDialAlphaZigZag {
         @Override
-        KeyDial createView(Context context) {
+        public KeyDial createView(Context context) {
             return new KeyDial(context, KeyDial.ALPHA_ZIGZAG);
         }
     },
@@ -24,7 +24,7 @@ public enum KeyboardLayout {
 
     KeyDialQwertyZigZag {
         @Override
-        KeyDial createView(Context context) {
+        public KeyDial createView(Context context) {
             return new KeyDial(context, KeyDial.QWERTY_ZIGZAG);
         }
     },
@@ -32,7 +32,7 @@ public enum KeyboardLayout {
 
     StandardQwerty {
         @Override
-        StandardQwerty createView(Context context) {
+        public StandardQwerty createView(Context context) {
             return new StandardQwerty(context);
         }
     },
@@ -40,7 +40,7 @@ public enum KeyboardLayout {
 
     SwipeKeyAlpha {
         @Override
-        SwipeKey createView(Context context) {
+        public SwipeKey createView(Context context) {
             return new SwipeKey(context, SwipeKey.ALPHA);
         }
     },
@@ -48,16 +48,16 @@ public enum KeyboardLayout {
 
     SwipeKeyQwerty {
         @Override
-        SwipeKey createView(Context context) {
+        public SwipeKey createView(Context context) {
             return new SwipeKey(context, SwipeKey.QWERTY);
         }
     };
 
 
-    abstract AbstractPredictiveKeyboardLayout createView(Context context);
+    public abstract AbstractPredictiveKeyboardLayout createView(Context context);
 
 
-    int getIcon() {
+    public int getIcon() {
         switch (this) {
             case KeyDialAlpha:
                 return R.mipmap.keydial_alpha;

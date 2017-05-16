@@ -16,6 +16,7 @@
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
+
     <application
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -54,6 +55,49 @@
         <activity
             android:name=".UserStudyActivity"
             android:label="@string/study_name" />
+
+
+        <service
+            android:name=".ime.KeyDialIME"
+            android:icon="@mipmap/keydial_qwerty_zigzag"
+            android:label="KeyDial"
+            android:permission="android.permission.BIND_INPUT_METHOD">
+            <intent-filter>
+                <action android:name="android.view.InputMethod" />
+            </intent-filter>
+            <meta-data
+                android:name="android.view.im"
+                android:resource="@xml/method" />
+        </service>
+
+
+        <service
+            android:name=".ime.SwipeKeyIME"
+            android:icon="@mipmap/swipekey_qwerty"
+            android:label="SwipeKey"
+            android:permission="android.permission.BIND_INPUT_METHOD">
+            <intent-filter>
+                <action android:name="android.view.InputMethod" />
+            </intent-filter>
+            <meta-data
+                android:name="android.view.im"
+                android:resource="@xml/method" />
+        </service>
+
+
+        <service
+            android:name=".ime.StandardQwertyIME"
+            android:icon="@mipmap/standard_qwerty"
+            android:label="QWERTY"
+            android:permission="android.permission.BIND_INPUT_METHOD">
+            <intent-filter>
+                <action android:name="android.view.InputMethod" />
+            </intent-filter>
+            <meta-data
+                android:name="android.view.im"
+                android:resource="@xml/method" />
+        </service>
+
 
     </application>
 
