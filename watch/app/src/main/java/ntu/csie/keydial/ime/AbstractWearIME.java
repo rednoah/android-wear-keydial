@@ -103,7 +103,7 @@ public abstract class AbstractWearIME extends InputMethodService {
 
     @Override
     public void onWindowShown() {
-        // TODO: keyboard does not generic motion events (Android Wear Bug)
+        // TODO: keyboard does not receive generic motion events (Android Wear Bug?)
 
         // try to focus suggestion recycler
         keyboard.getSuggestionView().requestFocus();
