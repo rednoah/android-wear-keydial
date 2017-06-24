@@ -1,0 +1,219 @@
+Mobile HCI 2017 Late Breaking notification - #129
+Mobile HCI 2017 Late Breaking <mobilehci17g@precisionconference.com>	23 June 2017 at 07:11
+Reply-To: latebreakingwork@mobilehci2017.acm.org
+To: r02922148@ntu.edu.tw
+Cc: latebreakingwork@mobilehci2017.acm.org
+
+
+
+Dear Reinhard Pointner -
+
+We are sorry to inform you that your paper
+
+  129 - A Comparison of Soft Keyboards on Circular Smartwatches
+
+has not been accepted to Mobile HCI 2017 LBW.
+
+MobileHCI 2017 LBW had 69 submissions; of these, 30 were accepted, for an acceptance rate of 43.5%. The decisions as to which submissions to accept were made after careful review by a number of highly qualified experts from around the world. Reviewers evaluated not only the scientific merit of the work, but also the suitability for the LBW category i.e. the novelty (how 'late-breaking' the paper was) and its potential to trigger conversations.
+
+We would very much like to encourage you to consider participating in Mobile HCI 2017.
+
+Below, you will find the reviews for your submission.
+
+Sincerely,
+Paweł W. Woźniak and Thomas Reitmaier
+MobileHCI 2016 LBW Co-Chairs
+
+------------------------ Submission 129, Review 3 ------------------------
+
+Title: A Comparison of Soft Keyboards on Circular Smartwatches
+
+Reviewer:           primary
+
+Overall
+
+   4  (Weak accept)
+
+Novelty
+
+   4  (The paper has some novelty that clearly explained)
+
+Enthusiasm
+
+   The work will stimulate conversation
+
+The Review
+
+   (blank)
+
+Expertise
+
+   4  (Expert)
+
+The Meta Review
+
+   Both reviewers were mildly negative towards the paper.
+
+   R1 notes that the paper is well-motivated and easy to understand. They
+   point to important related work missing. Both reviewers mention missing
+   details about the user study. R2 find the paper too open-ended. A key
+   issue is that the proposed techniques appear to be subpar. Finally, R2
+   points to formatting issues.
+
+   While the reviewers concerns are clear and they need to be addressed for
+   a final submission, I think that some of these flaws are acceptable for
+   am LBW.
+
+
+------------------------ Submission 129, Review 1 ------------------------
+
+Title: A Comparison of Soft Keyboards on Circular Smartwatches
+
+Reviewer:           external
+
+Overall
+
+   2  (Weak reject)
+
+Novelty
+
+   5  (There is good novelty in the paper)
+
+Enthusiasm
+
+   The work will stimulate some conversation
+
+The Review
+
+   The authors present a well written study of three different text entry
+   methods for circular wrist-worn touch devices. The authors implemented
+   two novel input techniques, and compared to a third, QWERTY based.
+
+   The introduction and motivation are easy to understand, and well argued.
+   The rest of the paper is also well presented. The study design looks
+   promising, and the data is treated right. I however have a few issues
+   with this research:
+
+   Related Work:
+   The authors neglect to describe the difference between circular and
+   rectangular text entry methods. Almost all of the related works mentioned
+   in the paper were implemented in rectangular interfaces. The authors need
+   to mention what design considerations go into designing text entry in
+   circular interfaces, and how well the "old" methods scale in such design
+   constraints.
+
+   Evaluation:
+   "Randomly selected sentences from MacKenzie and Soukoreff". Were these
+   random sentences the same random sentences for each keyboard? Sentences
+   from this source have shown to be very different in terms of input speed
+   (see [1]).
+
+   "All of them were right-handed and 11 [of 12] chose to wear the
+   smartwatch on their left wrist". Does this mean that 1 person (who was
+   right-handed) used left hand to input?!
+
+   Results:
+   I think Figure 5, 6, and 7 are more important than Table 1, and
+   enlarging, specifically Figure 5 would make the paper more accessible. I
+   think Figure 5 shows that for all keyboards, learning has not yet
+   stopped. This makes the argument of QWERTY being a well-known input
+   method a bit weak (since the QWERTY layout also probably did not reach
+   its full potential in this study).
+
+   The authors phrase that the contribution of the two proposed methods is
+   that they "did show merit in qualities such as character-by-character
+   accuracy". I find this contribution quite weak; essentially the QWERTY
+   layout was inferior to both of the proposed techniques, leaving little
+   reason to employ the authors' proposed techniques.
+
+   Overall:
+   I really enjoyed reading the work, and I think the authors did a good
+   job. I think in its current phrasing, it seems as if the authors propose
+   two new techniques, that didn't work that well. I think the research
+   would work better, had they done a comparison of existing techniques, and
+   not claiming any novelty in input design. Such a comparison paper would
+   probably need more input techniques for a longer duration of time,
+   however.
+
+   Minor things:
+   "Even though smartwatch devices have become comparable to smartphones in
+   terms of computing power" - not sure this is true.
+   "More recent techniques such as VelociTap..." - VelociTap is actually
+   older than SwipeKey mentioned just before.
+
+   [1] http://dl.acm.org/citation.cfm?id=2935360
+
+Expertise
+
+   3  (Knowledgeable)
+
+
+------------------------ Submission 129, Review 2 ------------------------
+
+Title: A Comparison of Soft Keyboards on Circular Smartwatches
+
+Reviewer:           external
+
+Overall
+
+   2  (Weak reject)
+
+Novelty
+
+   2  (The paper has limited novelty and is unclear)
+
+Enthusiasm
+
+   The work might stimulate limited conversation
+
+The Review
+
+   The paper is written in a way that it is easy to understand and the work
+   the authors did is well presented. My main concern with the work is, what
+   does the mobileHCI community gain from the paper. What is the new
+   insight? Because the main outcome of the paper is:  QWERTY keyboards are
+   still the best. Further, the related work section is short, and therefore
+   I think the authors could have reported on input beyond touch see e.g.
+   [X1].
+
+   The authors claim in the abstract that there will be more insight into
+   the char-by-char accuracy. However, I could not find statistical evidence
+   in the paper which would have supported the authors claim. In general,
+   the authors did not report on any ANOVA or statistical test. Which the
+   HCI community would have expected from the work.
+   Further, there is always a potential for a good char-by-char accuracy.
+   However, there will always be an accuracy vs. TCT tradeoff. Thus if I'm
+   searching longer for the correct key which the authors showed is the case
+   and even argues for it, then the accuracy is better because the
+   participant invests more time to find the correct spot and a thereby more
+   precise position.
+
+   The Section "User Performance" is unclear to me. "questionnaires and
+   interviews" how have they bee conducted and how analyzed. The authors
+   need to explain all the steps they did.
+
+   I'm wondering how the QWERTY keyboard design was chosen are the key the
+   same size as the android default keyboard? Could this have a bigger
+   effect?
+   One last remark regarding the three keyboards the text field size is
+   different for the KeyDail, which could have had an effect on readability.
+
+   I do think Limitations "Secondly" is wrong. All conditions have been
+   counter balanced, and therefore all tree conditions have the same amount
+   of training.
+
+   The paper closes with an open end. And at the end, I did not learn
+   anything beyond QWERTY is still the favorite keyboard. Which does not
+   really move the community forward.
+
+   # The template lags the DOI's
+
+   [X1] Markus Funk, Alireza Sahami, Niels Henze, and Albrecht Schmidt.
+   2014. Using a touch-sensitive wristband for text entry on smart watches.
+   In CHI '14 Extended Abstracts on Human Factors in Computing Systems (CHI
+   EA '14). ACM, New York, NY, USA, 2305-2310. DOI:
+   https://doi.org/10.1145/2559206.2581143
+
+Expertise
+
+   2  (Passing Knowledge)
